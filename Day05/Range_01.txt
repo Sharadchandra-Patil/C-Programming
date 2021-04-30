@@ -1,0 +1,150 @@
+				
+				signed and unsigned are called type modifier 
+
+				char ch=65;
+				// signed char ch = 65 
+				// BY defualt it is considered as signed 
+				// 'A' --> Ascii rep of A  
+
+				// A --> 65 
+
+				// variable declaration 
+				// ch is of type character 
+
+				// compiler will allocate some space for it
+
+				// compiler will internally allocated 1 byte memory  
+		
+				// 1 byte --> 8 bits 
+
+		
+			   	//ASCII --> 
+
+				
+				char ch;
+
+				8 bits 
+
+				range of char is 127 to -128 
+
+				char ch --> 127 
+					    126
+					    125 
+
+				signed --> -127
+				unsigned --> 16 , 15 , 18 , 19 		
+
+
+
+				char ch =65// 65 
+
+				char ch;
+				1 byte --> 8 bits 
+
+			1 bit --> sign storage --> 0 --> positive 
+						   1 --> negative 
+
+			MSB --> most sig bit
+
+			8 bits 
+			7 -> storage 
+			1 -> sign 
+
+		-	2 raise-to n-1 to -2 raise-to n-1 - 1  
+		n --> number of bits 
+
+		-(2 raise-to 7) to (2 raise-to 7 - 1 )   
+
+		-128  to 128 - 1
+		-128 to 127  
+
+
+		signed 
+
+		- 2 to the power n-1 
+		n --> n is number of bits 
+		2 to the power 8-1 
+		2 to the power 7 
+		-128 --> min value 
+
+		2 to the power n-1  - 1
+		n --> n is number of bits 
+		2 to the power 8-1 - 1 
+		2 to the power 7 - 1 
+		128 - 1 
+		127 --> max value 
+
+		char max --> 127 
+		char min --> -128  
+
+
+
+
+			int num = 100; 
+			// int --> 4 bytes --> 32 bits 
+
+		   - 2 to the power n-1 
+			// n is number of bits 
+			// n = 32 
+		  -  2 to the power 32 - 1 
+		  -  2 to the power 31 
+
+		  -  2 to the power 31	
+			- 2,147,483,647 --> minimum value 
+
+
+			2 to the power n-1  - 1
+			2 to the power 32 - 1 
+			2 to the power 31 
+			2,147,483,648
+			
+			
+
+
+
+
+
+			char ch; 
+			// by default it signed 
+
+
+			unsigned char ch; 
+			// now it will be considerd unsigned 
+			// unsigned means it can store only +ve 
+			// min range --> 0 
+			
+
+			char ch;
+			1 byte --> 8 bits 
+
+			(2 to the power n )- 1 
+
+			(2 to the power 8) - 1 
+			
+			256 - 1 
+			
+			255 --> max range 
+
+			
+				IEEE //  
+
+
+
+			float fvar; // 12.33  // %f
+	
+			// 12.33
+			
+			double d1;  // 12.33  // %lf
+
+
+
+
+
+
+
+
+
+
+
+
+
