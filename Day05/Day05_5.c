@@ -11,9 +11,9 @@ int main()
     // fact of 10000   
 
    // short int num1; 
-    long int num1;
+    long long num1;
     
-    printf("LONG LONG SIZE= %ld\n",LONG_MAX);
+    printf("LONG LONG SIZE= %ld\n",INT_MAX);
     printf("UNSIGNED LONG SIZE= %lu\n",ULONG_MAX);
     printf(" long int=%d\n",sizeof(num1));
     printf("num=%d\n",sizeof(num));
