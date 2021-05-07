@@ -1,0 +1,74 @@
+
+Q.1
+1) Which of the following is bit wise operator?
+A. && operator
+B. & operator
+C. || operator
+D. ! operator
+Answer : &
+
+2) What will be output?
+int main() { 
+	unsigned char a = 5, b = 9; 
+	printf("%d, %d\n", a & b, a && b);
+	return 0;
+}
+A. 1, 1
+B. 0, 1
+C. 5, 0
+D. 9, 1
+Answer: A
+
+5 --> 0 0 0 0 0 1 0 1
+9 --> 0 0 0 0 1 0 0 1
+-----------------------
+(1) --> 0 0 0 0 0 0 0 1
+
+5 (T) && 9 (T) --> 1 (T)
+
+
+
+Q.3 
+int main() 
+{ 
+    int x = 2, y = 5; 
+    (x & y) ? printf("True ") : printf("False "); // False
+    (x && y) ? printf("True ") : printf("False "); // True
+    return 0; 
+}
+
+A) False True
+B) True False
+C) True True
+D) False False
+Answer: A
+
+2 -- 0000 0010
+5 -- 0000 0101
+---------------
+     0000 0000 --> 0 -- False condition
+
+2 && 5 ---> T && T ---> True condition
+
+
+4) What will be output?
+int main() 
+{
+	int a = 20;	
+        int b = 21;	
+   	int c = 0;           
+   	c = a ^ b;   
+   	printf("C= %d\n", c );
+   	return 0;
+}
+
+A) C=1
+B) C=20
+C) C=21
+D) C=0
+Answer: A
+
+20 ---> 0 0 0 1 0 1 0 0
+21 ---> 0 0 0 1 0 1 0 1
+------------------------
+        0 0 0 0 0 0 0 1
