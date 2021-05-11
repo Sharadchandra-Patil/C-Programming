@@ -1,0 +1,90 @@
+		
+
+			
+
+
+
+
+********************
+
+
+
+printf(" %d %d %d %d %d %d %d",i++,i--,++i,--i,i,i+++j,j--); // compiler dependent 
+
+
+
+#include<stdio.h>
+
+
+int main()
+{
+	//int i=3;
+	//int j=4;
+
+	//printf("%d",i+++j);
+	// +++ --> ++ + --> i++ +j
+	//printf("%d",i++++j);
+	//++++ --> ++ ++ --> i++ ++j
+
+	//printf("%d",i+++++j);
+	//+++++ --> ++ ++ + --> i++ ++ +j
+
+	//printf("%d",i++ +++j);
+	//++ +++ --> ++ ++ + --> i++ ++ +j
+
+	//printf("%d",i++ + ++++j);
+	// ++ + ++++ --> ++ + ++ ++ --> i++ + ++ ++j
+
+	//printf("%d",i- + ++j);
+	// - + ++j
+	// i - ++j
+
+	//printf("%d",i+ + ++j);
+	// + + ++j
+	// i + ++j
+
+
+	//printf("%d",i- - ++j);
+	//- - ++j
+	//i + ++j
+
+	  //int a;
+	  //int i;
+	  //a=- -i+- -i+- -5;
+	   // i + i + 5
+	    // -(-4)+ -(-4)+ -(-5) =4+4+5 = 13
+} 	       
+
+
+
+#include<stdio.h>
+int main()
+{
+int a = 11, b = 2, ans;
+ans = a++ == 1 ? b == 2 ? 3 : --b : a;
+
+
+	if(a++==1)
+	{
+		if(b==2)
+		{
+			ans = 3;
+		}
+		else
+		{
+			ans = --b;
+		}
+
+	}
+	else
+	{
+		ans = a;
+	}
+
+
+
+printf ("%d\n", ans);
+return 0;
+}*/
+
+
