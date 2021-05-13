@@ -1,0 +1,37 @@
+
+
+
+
+
+
+// calling function
+main() {
+	// declaration of called function in calling function
+	int combination(int, int);
+
+}
+
+// called' function
+factorial() {
+
+}
+
+// called function
+combination() {
+	// calling' function
+	// declaration of called function in calling function
+	int factorial(int);
+
+}
+
+
+* In C, if function is not declared -- Compiler considers.
+	* Function can take any number of any type of arguments.
+	* Function return type is int.
+* It is always good practice to write function declaration.
+
+
+
+
+
+
