@@ -1,3 +1,0 @@
-# CProgrammig
-
-CProgrammig

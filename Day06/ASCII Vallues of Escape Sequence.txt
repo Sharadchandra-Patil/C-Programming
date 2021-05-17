@@ -1,0 +1,11 @@
+ASCII VALUES OF ALL Escape Sequence specifiers are as follows:
+ASCII value of \a = 7
+ASCII value of \b = 8
+ASCII value of \t = 9
+ASCII value of \n = 10
+ASCII value of \v = 11
+ASCII value of \f = 12
+ASCII value of \r = 13
+ASCII value of \" = 34
+ASCII value of \' = 39
+ASCII value of \  = 92

@@ -15,7 +15,9 @@ int main()
     c3 = GREEN;
     c4 = YELLOW; 
     printf("%d\n",c1);  
-    //RED++;  --> 1++ --> 1 = 1 + 1  
+    //RED++;  --> 1++ --> 1 = 1 + 1 // l-value error
+	
+	 
     printf("%d\n",c1*10);
 
     //enum color --> datatype 

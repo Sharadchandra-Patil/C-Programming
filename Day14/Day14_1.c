@@ -18,15 +18,6 @@ int main()
 
 
 
-
-
-
-
-
-
-
-
-
 /*
 #include<stdio.h>
 //int mysqrt( int num ); // function declaration / prototype/ signature  
@@ -44,6 +35,9 @@ int mysqrt( int num )
     res = num * num; 
     return res; 
 }
+
+
+
 */
 /*#include<stdio.h>
 int mysqrt( int num )

@@ -14,7 +14,7 @@ int main()
         case 'a':
         //case 65: // duplicate not allowed 
         printf(" A or a  ");
-        break;
+        //36break;
 
         case 'B':
         case 'b':
