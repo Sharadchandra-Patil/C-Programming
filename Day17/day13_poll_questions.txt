@@ -1,0 +1,110 @@
+DAY 13 Poll Questions
+----------------------------
+
+
+int main()
+    {
+        int a, b;
+        int *c;
+        c = &a;
+        a = 200;
+        b = 200;
+        *c = 100;
+        b = *c;
+        printf("%d %d",*c,b);
+        
+        return 0;
+    }
+
+A) 100 100
+B) 100 200
+C) 200 200
+D) Compile Time Error
+Answer : A
+
+
+#include <stdio.h>
+    int main()
+    {
+        int i = 97, *p = &i;
+        foo(&i);
+        printf("%d ", *p);
+    }
+    void foo(int *p)
+    {
+        int j = 2;
+        p = &j;
+        printf("%d ", *p);
+    }
+
+a) 2 97
+b) 2 2
+c) Compile time error
+d) Segmentation fault/code crash
+
+Answer :A	
+
+
+ #include <stdio.h>
+    int main()
+    {
+        int i = 97, *p = &i;
+        foo(&p);
+        printf("%d ", *p);
+        return 0;
+    }
+    void foo(int **p)
+    {
+        int j = 2;
+        *p = &j;
+        printf("%d ", **p);
+
+    }
+
+
+a) 2 2
+b) 2 97
+c) Undefined behaviour
+d) Segmentation fault/code crash
+
+
+Answer : A
+
+
+
+
+
+
+#include<stdio.h>
+int main( void )
+{
+void *ptr=NULL;
+char ch=72; 
+int no='i';
+float f=4.46;
+ptr=&ch; printf("%c", *(char*)ptr);
+ptr=&no; printf("%c", *(int*)ptr);
+ptr=&f; printf("-%.f", *(float*)ptr);
+return 0;
+}
+
+A) Hi-5
+B) Hi-4
+C) Hi-4.460000
+D) Garbage value
+
+
+Answer: B
+
+
+include <stdio.h>
+
+int main() {
+	int a = 10; // created on stack when main() is called.
+	static int b = 20; // created in data section when program started (before main() is called).
+	//static int c = a; //  created in data section when program started (before main() is called).
+					// but trying to initialize with a local var (which is not created yet).
+					// COMPILER ERROR.
+	// to initialize static and global variables, use const values (not local variables).
+	return 0;
+}
