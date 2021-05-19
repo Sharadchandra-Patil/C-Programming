@@ -22,7 +22,8 @@ int main()
 */
     const int num = 100; 
     const int num2 = 200; 
-    int const * ptr = &num;// const int const * ptr = &num; 
+    int const * ptr ;// const int const * ptr = &num; 
+    ptr = &num;
 // ptr is a non const pointer pointing to const int variable 
 
     // const keyword is before * so value is constant 

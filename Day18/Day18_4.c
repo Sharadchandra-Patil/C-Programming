@@ -1,12 +1,12 @@
 #include<stdio.h>
 
-/*
+
 int main()
 {
     int num = 10; 
-    printf("%d %d",num,++num);
+    printf("%d %d",num++,num++);
 
-    // printf("%d%d",num1,num2);  
+     printf(" %d",num);  
 
   // calling convention 
   // cdecl --> right to left 
@@ -14,7 +14,7 @@ int main()
   // pascal  --> calling convention
 
 }
-*/ 
+ 
 /*
 int main()
 {
