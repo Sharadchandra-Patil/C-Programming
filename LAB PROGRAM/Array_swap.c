@@ -10,7 +10,7 @@ int main()
 	for(i=0;i<n;i++)
 	{
 		printf("Enter array element arr[%d]:: ",i);
-		scanf("%d",&arr[i]);
+		scanf("%d",arr+i);//&arr[i]
 	}
 	
      swapelements(arr,n);

@@ -3,10 +3,10 @@
 int main()
 {
     
-    int arr[5] = { 1, 2, 3};
+    //int arr[5] = { 1, 2, 3};// last two values=0
     //int arr[5];// by default garbage local var
-    //int arr[] = { 1 , 2, 3 } ;   
-    //int arr[]; // size should be given error    
+    int arr[] = { 1 , 2, 3 } ;   
+   // int arr[]; // size should be given error    
        
     int i;    
     // partiall initialization 

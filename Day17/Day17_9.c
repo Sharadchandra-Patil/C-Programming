@@ -2,9 +2,10 @@
 
 int main()
 {
+    //int i;
     int arr[5] = {10,20,30,40,50}; 
     //arr++; lvalue arror 
-    // ++i++ // lvalue error  
+    // ++i++ ;// lvalue error  
     int *ptr = arr; 
 
     printf("%d",++*ptr);

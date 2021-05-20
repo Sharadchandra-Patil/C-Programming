@@ -21,8 +21,8 @@ int sum(int no)
     }
     else
     {
-       //a= no + sum(no-1); //correct
-       a= no + sum(--no); // diff
+       a= no + sum(no-1); //correct
+        //a= no + sum(--no); // diff
         //a= no + sum(no--); // stack overflow
         printf("\n sum(%d) a=%d", no, a);
         return a;

@@ -12,13 +12,15 @@ int main()
 */
      for(i=0;i<5;i++)
      {
-         printf("%u\n",&arr[i]); 
+         printf("\n%u",&arr[i]); 
+         //printf("\n %u",arr+i);
      }   
         
      printf("\n\n");   
      for(i=0;i<5;i++)
      {
-            printf("%d\n",arr[i]); 
+            //printf("%d\n",arr[i]); 
+            printf("%d\n",*(arr+i));
      }
      /*
         printf("arr[0]=%d\n",arr[0]);
