@@ -1,0 +1,90 @@
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+	char *s = "SunBeam";
+	int i;
+	char *p = s;
+
+	for(i=0;i<strlen(s);++i,++p)
+	    printf("%c",p[-i];	
+}
+
+	// p[-i] 
+		
+		*(p-i)
+		
+		*(100 - 0) 
+
+		*(100) --> S
+
+
+	p[-i]
+
+		*(p-i)
+
+		*(101 - 1) 
+	
+		* ( 100 )  --> S 
+
+
+
+	p[-i] 
+
+		*(p-i)
+
+		*(102-2)
+
+		*(100) --> S 		
+
+		   
+	 
+
+
+
+
+ #include <stdio.h>
+int main(void)
+{
+int a[5] = {5, 1, 15, 20, 25};
+int i, j, m;
+i = ++a[1];
+printf("%d\n",i);// 2 
+// pre-increment 
+
+j = a[1]++; // a[1] = 3 // post increment 
+printf("%d\n",j); //2 
+// post increment 
+
+m = a[i++];// m = 15 
+// post increment --> i --> 2++ --> 3  
+printf("%d\n",m);
+
+
+printf("%d, %d, %d", i, j, m);
+return 0;
+}
+
+#include<stdio.h>
+int main(void)
+{
+char *courses[]={ "PG-DAC","PG-DESD","PG-DMC",
+"PreCAT","PG-DBDA"},*temp=NULL;
+int i;
+
+
+temp = courses[3];
+// temp --> PreCAT
+
+courses[3] = courses[4];
+//PreCAT is overwritten with PG-DBDA 
+
+courses[4] = temp;
+//courses[4] --> PreCAT 
+
+for(i=0; i<=4; i++)
+
+printf("%s,", courses[i]);
+return 0;
+}
