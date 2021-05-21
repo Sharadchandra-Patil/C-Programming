@@ -90,15 +90,16 @@ int mystrlen(const char *s)
         return i;  
 }
 */ 
-/*
+
 int main()
 {   
-
+     int num1=10;
     char *ptr = "Sunbeam"; 
-    char name[50] = "Sunbeam"; 
+    char name[50] = {'a'}; 
+    int *ptr2 =&num1;
+    printf("\n%d",sizeof(ptr2));
 
     printf("%d\n",strlen(name));
     printf("%d\n",strlen(ptr)); 
 
 }
-*/

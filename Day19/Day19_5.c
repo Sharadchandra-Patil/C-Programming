@@ -16,12 +16,12 @@ int main()
        // 100 104 and 108 are the addresses    
 
     char *numbers[]={"zero","one","two","three"}; 
-
+    char ch[]="sunbeam\o";
     int num; 
     printf("Enter the num");
     scanf("%d",&num);
 
-    printf("size=%d\n",sizeof(numbers)); 
+    printf("size=%d\n",sizeof(ch)); 
 
     printf("%s", numbers[num]); 
 
