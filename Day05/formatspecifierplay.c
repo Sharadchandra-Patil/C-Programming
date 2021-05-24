@@ -14,5 +14,6 @@ int Value =sizeof(1)+sizeof('A')+sizeof(1.2);
 Value+= sizeof(10.2F);
 printf("Value=%-8d", Value);
 printf("Result=%-8.2f",value + Value /8.0f);
+printf("\nResult=%-8.2f",3+3.4+5);
 return 0;
 }

@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+/*
 int main()
 {
     //char *name = "sunbeam";
@@ -25,7 +25,7 @@ int main()
     return 0; 
 }
 
-/*
+*/
 int main()
 {
     char *name = "sunbeam"; 
@@ -36,13 +36,13 @@ int main()
 
     //printf("%s\n",name);
 
-    name[0] ='A'; 
+    name1[0] ='A'; 
 
-    printf("%s\n",name);
+    printf("%s\n",name1);
 
 
 }
-*/
+
 /*
 int main()
 {

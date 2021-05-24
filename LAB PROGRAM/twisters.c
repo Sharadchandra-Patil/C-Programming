@@ -1,16 +1,11 @@
-#include <stdio.h> 
-int main() 
-{ 
-    int a=(1,2 ,3);
-    int b,c; 
-      //3   4    5
-    b=++a, ++a, ++a; 
-      //4    5    6      6 4
-    printf("\na=%d,b=%d",a,b);
-       //4  5  6
-    c=b++,b++,b++;
-    //4    5    7       6 7 4                
-    printf("\na=%d,b=%d,c=%d",a,b,c); 
-
-    return 0; 
-} 
+#include<stdio.h>
+#define NO 10
+#define LEN 9
+int main(void)
+{
+char str[3][128]={"PG-DAC","PG-DESD","PG-DMC",
+"PG-DBDA","PreCat"};
+printf("%d %d %d",sizeof(str),sizeof(str[LEN]) ,
+sizeof(str[NO-1][LEN-1]));
+return 0;
+}

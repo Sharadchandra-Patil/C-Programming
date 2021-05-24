@@ -7,7 +7,7 @@ int main()
     //scanf("%[0-9]",name);
     //scanf("%[^0-9]",name);
     //scanf("%[A-Z]",name);
-    scanf("%[^A-Z]",name);
+    scanf("%[^A-Z]s",name);
 
     printf("%s",name);
 
