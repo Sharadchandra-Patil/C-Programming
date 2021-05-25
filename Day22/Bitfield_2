@@ -1,0 +1,134 @@
+
+
+
+
+
+
+
+
+union test
+{
+unsigned int x: 3;
+unsigned int y: 3;
+int z;
+};
+int main(void)
+{
+union test t;
+t.x = 5;
+t.y = 4;
+t.z = 10;
+printf("%4d %4d %4d\n", t.x, t.y, t.z);
+return 0;
+}
+
+
+	// 			No sign so all the bits are used for storage 
+	//			unsigned int x:3
+	// 			bit3 bit2 bit1
+	
+	//binary of 5  		--> 0101
+	//unsigned int x:3      --> so 3 bits from left are used for storage 
+			        --> 101 is stored in 3 bits 
+				--> 101								
+				      1 	
+				
+
+
+
+
+
+
+
+
+
+
+union test
+{
+unsigned int x: 3;
+unsigned int y: 3;
+int z;
+};
+int main(void)
+{
+union test t;
+t.x = 5;
+t.y = 4;
+t.z = 10;
+printf("%4d %4d %4d\n", t.x, t.y, t.z);
+return 0;
+}
+
+/*
+ * 			8 4 2 1 // 3 -->
+ * 			32 bit
+ *
+ * 	// In union largest datatype is int so 32 bit is allocated and shared among all
+ * 	// unsigned int x:3 --> first 3 bit are used for storage( same rule for others) 
+ * 	// t.x =5 // it means decimal of 5 is stored in first 3 bits ( from right side )
+ * 	// t.y =4 // it means decimal if 4 is stored in first 3 bits (stored from left side as unsigned int y:3 )
+ *
+ *  // int z // means 32 bit is allocated
+ *  // t.z = 10 // means evantually as memory is shared binary  of 10 is stored in all 32 bits (overwrite)
+ *  // now print t.x --> read first 3 bits ( decimal value of first 3 bits from right side is 2 )
+ *  // now print t.y --> read first 3 bits ( decimal value of first 3 bits from right side is 2 )
+ *  // now print t.z --> read all 32 bits ( decimal equivalent of all 32 bits is 10 so answer is 10)
+ *  // so it prints  2 2 10 
+ *
+ *  0000	0000     0000    0000 		0000 		0000		0 0 0 0   		0 0 0 0
+ * 																	   			1 0 1 0
+ * 	<------					   as union so 32 bit is shared  ------------------------->										   			
+ *
+ *  t.x --> read first 3 bits --> decimal is 2
+ *  t.y --> read first 3 bits --> decimal is 2
+ *  t.z --> read 32 bits 	  --> decimal is 10
+ */
+
+
+
+
+
+
+int res(int n)
+{
+	return ( n ? 1 + res ( n & n-1 ):0);
+}
+
+	n = 6 
+	 
+	    n=6 	
+int res(int n)
+{
+	return ( n ? 1 + res ( n & n-1 ):0);
+}
+            6
+int res(int n)
+{
+	return ( n ? 1 + res ( n & n-1 ):0);
+		 6 ? 1 + res ( 6 & 5 ) : 0 ) ;
+		 6 ? 1 + res ( 4 ) : 0 ) ; 6 ? 1 + 1 : 0 // 2 is returned so ans is 2   
+}
+
+
+           4
+int res(int n)
+{
+	return ( n ? 1 + res ( n & n-1 ):0);
+		 4 ? 1 + res ( 4 & 3 ) : 0 ) ;
+		 4 ? 1 + res ( 0 ) : 0 ) ;  // 4 ? 1 + 0 : 0  // 1 is returned 
+}
+
+          0
+int res(int n)
+{
+	return ( n ? 1 + res ( n & n-1 ):0);
+		 0? 1 + res ( 0 & -1 ) : 0 ) ; // 0 is false so : part 0 is returned 
+		    
+}
+
+
+****************************************************************************************
+
+
+
+
