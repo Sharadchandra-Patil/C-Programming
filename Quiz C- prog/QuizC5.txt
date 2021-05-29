@@ -1,0 +1,131 @@
+1. 
+What will be the output of this code?
+int main(void)
+{
+double arr[4]={11.1, 22.2, 33.3, 44.4};
+double *p = arr+2;
+p -= 1;
+*p++ = 30.30;
+printf("%.2f %.2f",*p,arr[2]);
+return 0;
+}
+
+
+2. 
+#include<stdio.h>
+int main()
+{
+	int i;
+	int arr[5]={1,2,3,4,5};
+	*arr+=*(arr+3)-2[arr];
+	for (i = 0; i < 5; ++i)
+	{
+		printf("\t%d,",arr[i]);
+	}
+}
+
+
+3. 
+What will be the output of this code?
+#include<stdio.h>
+int main( void )
+{
+	int *ptr;
+	int arr[100],i=0;
+	char str[40] = "sunbeam pune & sunbeam hinjewadi";
+	ptr = arr;
+	if((arr[0+i]==i[0+i+arr]) && (arr[0+i] == *(ptr + i)) && (ptr == arr))
+		printf("\n %s \n", (str+13));
+	else
+		printf("\n %s \n", (str+0));
+
+	return 0;
+}
+
+
+4. 
+Which of the following statements will create error in the program.
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+1.    int main( void )
+2.   {
+3.   char *str = "sunbeam pune";
+4.   char d_str[25];
+5.   strcpy(d_str,"sunbeam hinjewadi");
+6.   *(d_str+8) = 'H';
+7.    *(str+8) = 'P';
+8.    printf("\n str = %s \n",str);
+9.    printf("\n d_str = %s \n",d_str);
+10.  return 0;
+11.   }
+
+
+5. 
+#include <stdio.h>
+int main(void)
+{
+int arr1[] = {1,2,3,4,5};
+int arr2[] = {1,2,3,4,5};
+if(arr1==arr2)
+	printf("Same");
+else
+	printf("Not same");
+}
+
+
+6. 
+#include <stdio.h>
+int main(void)
+{
+	int i=0;
+	char *name = "Sunbeam";
+	name[i]='A';
+	printf("%s",name);
+}
+
+
+7. 
+#include <stdio.h>
+int main(void)
+{
+	int i=0;
+	char str1[10]="Sunbeam";
+	char str2[10];
+	strcpy(str2,"Sunbeam");
+	if(*str1==str2[i])
+		printf("same");
+	else
+		printf("not same");
+}
+
+
+8. 
+#include <stdio.h>
+int main(void)
+{
+int arr[] = {11, 22, 12, 42, 58, 67};
+int *ptr = (int*)(&arr+1);
+ptr--;
+printf("\nptr=%u",*ptr+1);
+}
+
+
+9. 
+what will be the output of this code?
+#include<stdio.h>	
+int main()
+{
+	int arr[] = {11, 12, 13, 14, 15};
+        printf("%d\t%d\t%d",*(arr+3),++*(arr+3),++3[arr]);
+         return 0;	
+}
+
+
+10. 
+#include <stdio.h>
+int main(void)
+{
+	char str1[]="Sunbeam";
+	printf("%d",*(str1+strlen(str1)));
+}

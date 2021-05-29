@@ -1,0 +1,165 @@
+1. 
+What will be the o/p of the following code
+If P is a pointer to an integer and T is a pointer to a character then scale factor of P will be
+
+
+2. 
+What will be the o/p of the following code
+#include <stdio.h>
+int main(void)
+{
+	int arr[5]={10,20,30,40,50};
+	int *ptr;
+	ptr = arr+2;
+	*ptr=33;
+	*ptr++;
+	printf("%d",--*ptr);
+}
+
+
+3. 
+#include <stdio.h>
+int main(void)
+{
+	char num=256;
+	int *ptr=&num;
+	*ptr++;
+	int *ptr2=--ptr;
+	printf("%d",*(char *)ptr2);
+}
+
+
+4. 
+What will be the output of Following Code?
+#include<stdio.h>
+int main()
+{
+	void *ptr_name=NULL;
+	char ch=115;
+	int j=117;
+	ptr_name=&ch;
+	printf("%c", *(char*)ptr_name);
+	ptr_name=&j;
+	printf("%c", *(char *)ptr_name);
+	int a = 12;
+	void *ptr = (char *)&a;
+	printf("\t%d", *(char*)ptr);
+	return 0;
+}
+
+
+5. 
+What will be the o/p of the following code
+#include <stdio.h>
+int num=10;
+void update(int *ptr)
+{
+	*ptr+=num;
+}
+int main(void)
+{
+	int num=100;
+	printf("%d\n",num);
+	update(&num);
+	printf("%d\n",num);
+}
+
+
+6. 
+What will be the output of following code snippet?
+#include <stdio.h>     
+ void display(int*);
+ int main()
+ {
+     int i = 10, *p = &i;
+     display(p++);
+      printf("%d\n", *--p);
+  }
+void display(int *p)
+{
+  *p == 11;        
+   printf("%d\n", *p);
+  }
+
+
+7. 
+What will be the o/p of the following code
+#include <stdio.h>
+int main(void)
+{
+
+	int num=10;
+	int *ptr=&num;;
+	int **pptr=NULL;
+
+	pptr=&ptr+1;
+
+	printf("%d",**--pptr+1);
+	return 0;
+}
+
+
+8. 
+What will be the o/p of the following code
+#include <stdio.h>
+int* update(int *ptr)
+{
+	int number=10;
+	number=number + *ptr;
+	return &number;
+}
+int main(void)
+{
+	int *ptr;
+	int num=10;
+	*ptr = update(&num);
+	printf("%d",*ptr);
+
+}
+
+
+9. 
+What will be the Output?
+#include <stdio.h>
+int main()           //assume x address is 2000 and ptr address  is 2004
+{
+    int x = 0 ;
+    int *ptr = &x;
+    *ptr += 5;
+    printf("\n x  = %d", x);
+    printf(" *ptr = %d", *ptr);
+    (*ptr)++;
+    printf("\n x  = %d", x);
+    printf(" *ptr = %d", *ptr++);
+    printf("\n Difference= %d", ptr - &x);
+    return 0;
+}
+
+
+10. 
+What will be the output of following Code?
+#include<stdio.h>
+int fun(int **p,int *k)
+{
+    **p = *k;
+    *k = 11 ;
+   return **p;	
+}
+void num(int *p, int m)
+{
+    m = m + 5;			
+    *p = fun(&p,&m) + m;	
+    return;
+}
+int main()
+{
+int i=5, j=10;		
+num(&i, j);			
+printf("%d", i+j);
+return 0;
+}
+Answers
+1. 36
+2. 15
+3. 21
+4. 26

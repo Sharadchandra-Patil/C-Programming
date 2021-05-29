@@ -1,0 +1,208 @@
+1. What is the output of the following code? 
+#include<stdio.h>
+void main()
+{
+	int s=0;	
+	while(s++<10)
+	{
+		if(s<4 && s<9)
+			continue;
+		printf(“\n%d\t”,s);
+	}
+}
+Answers
+1. 1 2 3 1 0
+2. 4 5 6 7 8 9
+3. 4 5 6 7 8 9 10
+4. 1 2 3 4 5 6 7 8 9
+
+2. Point out the error, if any, in the while loop.a
+main()
+{
+	int i=1;
+	while()
+	{
+		printf(“%d”,i++);
+		if( i > 10 )
+			break;
+	}
+}
+
+
+3. void main()
+{
+while(1){
+if(printf("%d",printf("%d")))
+break;
+else
+continue;
+}
+}
+
+
+4. What will be the output of following program ?
+#include <stdio.h >
+void main()
+{
+	unsigned char var=0;
+	for(var=0; var ;var++)
+	 {
+		printf("%d ",var);
+	 }
+}
+
+
+5. #include <stdio.h>
+void main()
+{
+    int i=1;
+    while (i<=5)
+    {
+       printf("%d",i);
+       if (i==5)
+              goto print;
+       i++;
+    }
+}
+
+
+6. #include <stdio.h>
+int main()
+{
+    int loop=10;
+    while(printf("Hello ") && loop--);
+}
+
+
+7. #include <stdio.h> 
+int main() 
+{ 
+    int i = 0, j = 0; 
+    while (i<5,j<10) 
+    { 
+        i++; 
+        j++; 
+    } 
+    printf("%d %d", i, j); 
+}
+
+
+8. Output?
+#include <stdio.h>
+int main()
+{
+    int c = 5, no = 10;
+    do {
+        no /= c;
+    } while(c--);
+  
+    printf ("%dn", no);
+    return 0;
+}
+
+
+9. 2.What will be the output of the following code?
+#include<stdio.h>
+int main() {
+	int i = 0;
+	for (printf("\nCDAC"); i < 2 && printf("\tSUNBEAMINFO");
+			++i && printf("\tHINJEWADI")) {
+		printf("\t*n");
+	}
+	return 0;
+}
+
+
+10. 3. What will be the output of the following code? 
+#include<stdio.h>
+int main() {
+	int  i = -3, j = 0;
+	while (i <= 3, j < 10) {
+		if (i >= 0)
+			break;
+		else {
+			i++;
+			j++;
+		}
+		printf("%d, %d\n", i, j);
+		continue;
+	}
+	printf("\nSunbeam");
+	return 0;
+}
+
+
+11. 7) what will be the output of following code?
+int main() {
+	int x;
+	for (x = 1; x <= 5; x++) {
+		switch (x) {
+		case 1:
+			printf("Sunbeam");
+			continue;
+		case 2:
+		case 3:
+		case 4:
+			break;
+		case 5:
+			printf("Info");
+		}
+		printf(".com");
+	}
+}
+
+
+12. 10. What will be the output?
+#include<stdio.h>                                           
+int main()
+{
+int x=5;
+switch(	x*2,5)
+{
+   case 15:
+      printf("One");
+      break;
+   case 10:
+      printf("Two");
+	       break;
+   default:
+      printf("Three");
+}
+return 0;
+}
+
+
+13. What will be the output of following program ?
+
+#include<stdio.h>
+enum menu
+{ a=2,b,c,d=-1,e};
+enum menu m;
+int main()
+{
+    printf(“%d  %d”,b+a,e+d);
+}
+
+
+14. What will be the output of following program ?
+
+#include<stdio.h>
+enum menu
+{ a=2,b=3.56 };
+enum menu m;
+main()
+{
+    printf(“%d%d”,a,b);
+}
+
+
+15. #include<stdio.h>
+enum E_COURSE
+{
+    EDAC,EDBDA,EDMC;
+};
+main()
+{
+    enum E_COURSE x;
+    printf("%d",x);
+}

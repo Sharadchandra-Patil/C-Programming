@@ -1,0 +1,192 @@
+1. 
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+
+int main()
+{
+    char *s;
+    char *fun();
+    s = fun();
+    printf("%s\n", s);
+    return 0;
+}
+char *fun()
+{
+    char *buffer;
+    buffer = (char*)malloc(sizeof(char)*5);
+    strcpy(buffer, "RAM");
+    return (buffer);
+}
+
+
+2. 
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+char *ptr=NULL;
+int alloc_length =16 ;
+int new_length;
+
+ptr = (char *)malloc(sizeof(char)*alloc_length);
+
+ptr = realloc(ptr, alloc_length << 1);
+
+free(ptr);
+ptr=NULL;
+
+return 0;
+}
+
+
+3. 
+#include<stdio.h>
+#ifdef __FUN_H
+#define __FUN_H
+#pragma pack(2)
+typedef struct employee
+{
+  int age;
+  int id;
+  char name[40];
+  char section; // A,B,C 
+}emp;
+
+#endif
+
+#pragma pack(1)
+typedef struct employee
+{
+  int age;
+  int id;
+  char name[60];
+  char section; // A,B,C 
+}emp;
+
+int main()
+{
+emp e1;
+printf("\nsizeof(e1) = %d\n",sizeof(e1));
+return 0;
+}
+
+
+4. 
+What is the output of C program
+#include<stdio.h>
+#define CONDITION(x)\
+printf("Machine Learning\n"+8);
+int main()
+{
+  CONDITION(0);
+  return 0;
+}
+
+
+5. 
+#include<stdio.h>  
+#define MAX(x, y) if(x-=x)x-=x;else y-=y;
+int main()  
+{  
+    int a=2,b=4;  
+    MAX(a,b);  
+    printf("%d %d\n", a,b);  
+    return 0;  
+}
+
+
+6. 
+What is the output of C program
+#include <stdio.h>
+#define p 24;
+int main()
+{
+  printf("%d",p);
+  return 0;
+}
+
+
+7. 
+what will be the output of this code?
+#include <stdio.h>
+#define EQUAL(X, Y) X == Y
+int main()
+{
+    #if EQUAL(X, 0)
+        printf("SUNBEAM");
+    #else
+        printf("TEST");
+    #endif
+    return 0;
+}
+
+
+8. 
+Find the output of the following
+int main()
+{
+    char *cptr = calloc((char)127,1);
+    strcpy(cptr,"sunbeam pune");
+    free(*cptr);
+    return 0; 	  
+}
+
+
+9. 
+what will be the output of this code?
+
+#include<stdio.h>
+#define a 100
+int main()
+{
+printf("a : %d\n",a);
+#ifndef a
+#define a 30
+#else
+#undef a
+#define a 40
+printf("a : %d",a);
+return 0;
+}
+
+
+10. 
+What will be the output of the following C code?
+#include<stdio.h>
+#include<stdlib.h>
+void display(int *ptr, int count);
+int fun_add(int *ptr, int count);
+int main()
+{
+     int *a,result;
+     a=(int*)calloc(5*sizeof(int));
+     int i;
+     for(i=1;i<5;i++)
+     {
+    	 *(a + i) += 10 + *(a+i-1);
+     }
+     display(a,5);
+     result = fun_add(a,5);
+     printf("\t result = %d",result);
+     free(a);
+     return 0;
+}
+
+int fun_add(int *ptr, int count)
+{
+	int i,result=0;
+	for(i=0;i<count;i++)
+	{
+		result += *(ptr+i);
+	}
+	return result;
+}
+void display(int *ptr, int count)
+{
+   int i;
+   for(i=0;i<count;i++)
+   {
+	   printf("\t %d",*(ptr+i));
+   }
+}
