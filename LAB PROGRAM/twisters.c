@@ -1,11 +1,11 @@
 #include<stdio.h>
-#define NO 10
-#define LEN 9
-int main(void)
+#include<stdlib.h>
+int main( void )
 {
-char str[3][128]={"PG-DAC","PG-DESD","PG-DMC",
-"PG-DBDA","PreCat"};
-printf("%d %d %d",sizeof(str),sizeof(str[LEN]) ,
-sizeof(str[NO-1][LEN-1]));
+int *a[3];
+printf("%u  %u   %u\n",&a+1,&a[0]+1,a+1);
+
+//a = (int*) malloc(sizeof(int)*3);
+//free(a);
 return 0;
 }
