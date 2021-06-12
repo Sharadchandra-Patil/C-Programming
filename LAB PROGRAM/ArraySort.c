@@ -34,7 +34,7 @@ void ArraySort(int *a,int n)
 				   max_index=i;
                  }
            }
-        printf("max=%-6d  max_index=%-6d ",max,max_index);   
+       // printf("max=%-6d  max_index=%-6d ",max,max_index);   
            
         if(j!=max_index)
 		{
