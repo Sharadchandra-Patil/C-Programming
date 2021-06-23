@@ -3,9 +3,9 @@ int gcd(int , int);
 int main()
 {
     int n1,n2,ans;
-    printf("Enter two numbers 1 :");
+    printf("Enter number 1 :");
     scanf("%d",&n1);
-    printf("Enter two numbers 2: ");
+    printf("Enter number 2 : ");
     scanf("%d",&n2);
     ans = gcd(n1,n2);
     printf("Greatest common divisor of %d and %d  is = %d ",n1,n2,ans);
