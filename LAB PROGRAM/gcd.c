@@ -2,9 +2,9 @@
 int main()
 {
     int n1,n2,rem,on1,on2;
-    printf("Enter two numbers 1 :");
+    printf("Enter number 1 : ");
     scanf("%d",&n1);
-    printf("Enter two numbers 2: ");
+    printf("Enter number 2: ");
     scanf("%d",&n2);
     on1=n1;
     on2=n2;
