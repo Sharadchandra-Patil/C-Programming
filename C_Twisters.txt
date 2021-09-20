@@ -1,0 +1,324 @@
+51. 
+#include<stdio.h>
+int main(void)
+{
+	int a = 0;
+	for (a = 0; a<10; a++)
+	{
+		switch(a++)  //<== a=1
+		{
+			case 0:a += 5;
+			case 1:a += 2;
+			case 5:a += 5;
+			default: a += 4;
+                        break;   
+		}
+		printf("%5d", a);
+	}
+	printf("\n");
+	return 0;
+}
+Answers
+1. 16 21
+2. 17        //
+3. 16
+4. Error
+
+
+52. 
+PreProcessor replaces EXIT_SUCCESS symbol with --------
+Answers
+1. 0              //
+2. 1
+3. -1
+4. Any integer value randomly
+
+
+
+53. 
+#include <stdio.h>
+int f(int *a, int n)
+{
+	if(n <= 0) return 0;
+	else if(*a % 2 == 0) return *a + f(a+1, n-1);
+	else return *a - f(a+1, n-1);
+}
+int main()
+{
+	int a[] = {12, 7, 13, 4, 11, 6};
+	printf("%d", f(a, 6));
+	getchar();
+	return 0;
+}
+Answers
+1. 15                //
+2. 13
+3. 12
+4. Error
+
+
+
+54. 
+Find the output of the following:
+int main()
+{
+	float farr[] = {1.1,2.2,3.3,4.4,5.5};
+	float *fp = farr+4;
+	int x ;
+	printf("%.2f",fp[-(x=sizeof(5.5)-6)]);  //<== 5.5 <-- double == 8
+        return 0;
+}
+Answers
+1. Garbage
+2. 4.40
+3. 3.30               //
+4. Compile Time Error
+
+
+
+
+55. 
+#include <stdio.h>
+int fun(void)
+{
+	int a = 20, b = 48;
+	a = a + b;
+	return '48';
+}
+int main(void)
+{
+	printf("%d", sizeof(fun()));
+	return 0;
+}
+Answers
+1. 1
+2. 4         //
+3. 30
+4. 48
+
+
+
+56. 
+Find the output of the following:
+int main()
+{
+	typedef enum {O1=2 >= 5 != 4 ,O2= !(2 < 5 != 4)} OPR;
+	OPR choice=0;
+	do
+	{
+		switch(choice)
+		{
+			case O1:
+					--choice;
+					printf("%2d",choice);	break;
+			case O2:
+					printf("%2d",choice);	break;
+		}
+break;
+	} while (++choice);	
+	return 0;
+}
+Answers
+1. Compile Time Error
+2. 1  0
+3. 0                         //
+4. 1
+
+
+
+57. 
+#include <stdio.h>
+int a = 23, b = 36;
+void fun(int *p)
+{
+	*p = *p + *p;	
+}
+
+int main()
+{
+	int *p = &a;
+	p = &b;
+	fun(p);
+	printf("a = %d, b = %d\n",a,b);
+	return 0;
+}
+Answers
+1. a = 23, b = 36
+2. a = 46, b = 72
+3. a = 23, b = 72     //
+4. Compile time error
+
+
+
+
+
+58. 
+Find the output of the following:
+int fun_test(int a,int b)
+{
+	a= !a;
+	b = ~b;
+	return a,b;
+}
+int main()
+{
+	int a=4,b=5;
+	a,b = fun_test(!a,~b);
+	printf("%d %d",a,b);
+	return 0;
+
+}
+Answers
+1. 0  -5
+2. 4   5   //
+3. 5  5
+4. 4  4
+
+
+
+59. 
+Find the output of the following:
+#include<stdio.h>
+typedef struct employee
+{
+    int id;
+    char dept[10];
+    struct  employee *emplist;
+}EMP; 
+int main()
+{
+    EMP e1={101,"ADMN",NULL};
+    EMP e2={102,"MRKT",NULL};
+    EMP e3={103,"TCT",NULL};
+    EMP e4={104,"SAN",NULL};
+    e1.emplist = &e2 ;
+    e2.emplist = &e3;
+    e3.emplist = &e4;
+    printf("%d",e1.emplist->emplist->emplist->id);
+    return 0;
+}
+Answers
+1. 101
+2. 102
+3. NULL
+4. 104   //
+
+
+
+
+60. 
+Find the output of the following:
+int main()
+{
+	int d;
+	d = printf("Sunbeam") == printf("\rSunBeam") ;
+	printf("%2d",d);
+       return 0;
+}
+Answers
+1. Sunbeam 1
+2. Sunbeam 0
+3. SunBeam 0                 //
+4. Sunbeam SunBeam  0
+
+
+
+61. 
+What is true about FILE *fp
+Answers
+1. FILE is a keyword in C for representing files and fp is a variable of FILE type
+2. FILE is structure and fp is poninter to that structure of FILE type  //
+3. FILE is stream
+4. None of the above
+
+
+
+
+
+62. 
+What should be the output of the following code?
+if file contents following data in rivers.txt
+Neera Indrayani Venna Koyna
+#include <stdio.h>
+int main( void )
+{
+	FILE *fp=NULL;
+	char c[1024];
+	fp = fopen("rivers.txt", "r");
+	fseek(fp, 0, SEEK_END);
+	fseek(fp, -9L, SEEK_CUR);
+	fgets(c, 5, fp);
+	puts(c);
+	return 0;
+}
+Answers
+1. na k
+2. na
+3. a k
+4. nna     //
+
+
+
+63. 
+#include <stdio.h>
+int main()
+{
+	int a = 10;
+	int *p = &a;
+	printf("%u\n", *&*&p);
+	return 0;
+}
+Consider the address of 'a' variable is 3416378588
+and address of 'p' pointer is 3416378592
+Answers
+1. 10
+2. 3416378592
+3. 3416378588              //
+4. Compile time Error
+
+
+
+
+64. 
+Find the output of the following:
+#include<stdio.h>
+int main()
+{
+    FILE *fp = fopen("abc.txt","w+");
+    int a,b,c;
+    fprintf(fp,"%d %d %d",10,20,30);
+    rewind(fp);
+    printf("%d",fscanf(fp,"%d %d %d",&a,&b,&c));
+    fclose(fp);
+   return 0;
+}
+Answers
+1. 10 20 30
+2. 3   //
+3. 1
+4. -1
+
+
+
+65. 
+#include <stdio.h>
+int main()
+{
+      int done = 0,  i = 0, x = 25;
+	while(i < 10  && !done )
+	{
+		if((x /= 2) > 1)
+		{
+			i++;
+			continue;
+		}
+		done++;
+	}
+	printf("x = %d\n",x);
+	return 0;
+}
+Answers
+1. 0
+2. 1      //
+3. 12
+4. 25

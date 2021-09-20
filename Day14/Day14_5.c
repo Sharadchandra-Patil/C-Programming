@@ -2,7 +2,7 @@
 
 
 int fun() {
-	static int num = 10; // static  -- initilized only once -- when program started (like global)
+	static int num ; // static  -- initilized only once -- when program started (like global)
     num++;
 	printf("%d\n", num);
 }

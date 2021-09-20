@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<string.h>
-char* mystrchr(const char *s, int find);
+char* mystrchr( char *s, int find);
 int main()
 {
     char src[40], f;
@@ -20,10 +20,10 @@ int main()
     
     return 0;
 }
-char* mystrchr(const char *s, int find)
+char* mystrchr( char *s, int find)
 {
     int index;
-   
+    s[1]='d';
     for(index=0; s[index]!='\0' ; index++) //for(index=0; *(s+index)!='\0' ; index++)
     {
        if(s[index]==find) // if(*(s+index)==find)

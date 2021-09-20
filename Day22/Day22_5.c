@@ -15,27 +15,31 @@ int main(void)
 	}
 
 	printf("%ld pos",ftell(fptr));
+	printf("    %c\n",ch=fgetc(fptr));
 
-	while((ch =fgetc(fptr))!=EOF)
+	/*while((ch =fgetc(fptr))!=EOF)
 	{
 		printf("\n %c %ld",ch,ftell(fptr));
 	}
 	printf("\n%ld pos",ftell(fptr));
-
+   */
 
 	//reposition file pointer 10 offset position ahead from beginning of file
-	fseek(fptr,10,SEEK_SET);	//fseek(fptr,10,0);
+	fseek(fptr,10,SEEK_SET);
+	printf("%ld pos",ftell(fptr));	//fseek(fptr,10,0);
 	ch = fgetc(fptr);	//reads a byte info at a time from file associated with fileptr
-	printf("\n read char = %c Current Position %ld",ch, ftell(fptr));
+	printf("\n read char = %c Current Position %ld ",ch, ftell(fptr));
 
 	//reposition file pointer 5 offset position back from current position of file
-	fseek(fptr,-5,SEEK_CUR);	//fseek(fptr,-5,1);
+	fseek(fptr,-5,SEEK_CUR);
+	printf("% ld pos",ftell(fptr));	//fseek(fptr,-5,1);
 	ch = fgetc(fptr);	//reads a byte info at a time from file associated with fileptr
 	printf("\n read char = %c Current Position %ld",ch, ftell(fptr));
 
 
 	//reposition file pointer 5 offset position back from end of file position of file
-	fseek(fptr,-5,SEEK_END);	//fseek(fptr,-5,2);
+	fseek(fptr,-2,SEEK_END);
+	printf(" %ld pos",ftell(fptr));	//fseek(fptr,-5,2);
 	ch = fgetc(fptr);	//reads a byte info at a time from file associated with fileptr
 	printf("\n read char = %c Current Position %ld",ch, ftell(fptr));
 
@@ -46,6 +50,6 @@ int main(void)
 	
 
 	fclose(fptr);
-
+	
 	return 0;
 }

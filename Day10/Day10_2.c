@@ -42,8 +42,8 @@ int i=1;
         //1 2 3 4 5
     }
      printf("Outside  the loop i:%d\n",i);
-*/
-/*
+
+
     int i=1; 
     for(i=1;;i++)
     {
@@ -54,8 +54,9 @@ int i=1;
      printf("Outside  the loop i:%d\n",i);
 
 */
-      int i,j;
-
+      int i=1,j=0,k;
+         k =i,j;
+        printf("%d",k);
       for(i=1,j=1;i<=5,j<=10;i++,j++)
       {
           printf("i:%dj:%d\n",i,j);

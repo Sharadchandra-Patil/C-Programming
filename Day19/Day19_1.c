@@ -1,11 +1,14 @@
 #include<stdio.h>
-/*
+#include<string.h>
+
 int main()
 {
-    //char *name = "sunbeam";
-    //char *name1 = "Sunbeam";
+    char *name = "sunbeam";
+   
+    char *name1 = "";
     char name2[10] = "Sunbeam"; 
-
+    //char name2[10] = "sharad";
+    strcpy(name2 , name);
     printf(name2);
     printf("\n");
     printf(name2+1); 
@@ -14,18 +17,18 @@ int main()
      printf(name2+2);  
 
 
-    //printf("%u\n",&name[0]);
-    //printf("%u\n",&name1[0]);
+    printf("%u\n",name);
+    printf("%u\n",&name1[0]);
 
-    //if(name==name1)
-        // printf("Same");
-   // else 
-       // printf("not same"); 
+    if(name==name1)
+         printf("Same");
+    else 
+        printf("not same"); 
 
     return 0; 
 }
 
-*/
+/*
 int main()
 {
     char *name = "sunbeam"; 

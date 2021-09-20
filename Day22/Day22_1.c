@@ -10,5 +10,5 @@
 
 int main()
 {
-    printf("%d",sizeof(struct test)); 
+    printf("%d \n",sizeof(struct test)); 
 }

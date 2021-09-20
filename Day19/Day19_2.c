@@ -94,12 +94,14 @@ int mystrlen(const char *s)
 int main()
 {   
      int num1=10;
-    char *ptr = "Sunbeam"; 
-    char name[50] = {'a'}; 
-    int *ptr2 =&num1;
+    char *ptr = "Sunbeamss"; 
+    char name[] = "sharad patil"; 
+    char *ptr2 =name;
+    scanf("%s",name);
     printf("\n%d",sizeof(ptr2));
-
-    printf("%d\n",strlen(name));
+   printf(name);
+    printf("\n%d\n",strlen(name));
     printf("%d\n",strlen(ptr)); 
+    printf("size= %d",sizeof(name));
 
 }

@@ -9,7 +9,7 @@ int main()
    // printf("%.2f\n",12.33f);
     //printf("%.8lf\n",10.3312121212121212);
     //printf("%c\n",'A');
-    printf("%o\n",0101);
+    printf("%#o\n",0101);
     printf("%d\n",0101);  
     // octal representation of 0101 in decimal %d
 

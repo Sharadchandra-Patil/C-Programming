@@ -23,9 +23,10 @@ int main()
 char* mystrcpy(char *d, const char *s)
 {
     int index=0;
-    while( *(s+index)!='\0')
+    while( *(s+index))
     {
-           *(d+index)= *(s+index);
+          // *(d+index)= *(s+index);
+           d[index] = s[index];
            index++; 
     }
     *(d+index)='\0';

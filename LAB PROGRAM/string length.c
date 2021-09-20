@@ -8,7 +8,7 @@ int main()
     printf("\n Enter src:: ");
     scanf("%s", src);
     // ans= strlen(src);
-     ans= mystrlen(src);
+    ans= mystrlen(src);
     printf("\n length of %s is %u", src, ans);
     return 0;
 }
